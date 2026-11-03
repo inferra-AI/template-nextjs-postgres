@@ -1,0 +1,12 @@
+version: 3
+name: web
+type: web
+process: web
+port: 3000
+health:
+  path: /api/health
+build:
+  env:
+    BP_NODE_VERSION: "22.*"
+services:
+  db: readwrite
